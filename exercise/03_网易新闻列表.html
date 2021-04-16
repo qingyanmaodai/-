@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background-color: #bfa;
+        }
+        /* 设置容器的样式 */
+        .news-list{
+            /* 宽高 */
+            width: 300px;
+            height: 323px;
+            background-color:#FFFFFF;
+            margin: 50px auto; 
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 设置new-title */
+        .news-title{
+            height: 31px;
+            border-top: 1px red solid;
+            /* 为了边框和文字宽度一致，需要将h2转换为行内块元素 */
+            display: inline-block;
+            /* 通过margin-top将h2上移，盖住上边框 */
+            margin-top:-1px;
+            padding-top:10px;
+        }
+        /* 设置title中超链接的样式 */
+        .news-title a{
+            /* 设置下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color:#404040;
+            /* 设置字体加粗效果 */
+            font-weight: bold;
+        }
+        .news-title a:hover{
+            color: red;
+        }
+        .news-img{
+            height: 150px;
+        }
+        /* 设置图片文字效果 */
+        .img-title{
+            /* 设置字体颜色 */
+            color:#FFFFFF;
+             /* 向上移动文字 */
+            margin-top: -30px;
+            /* 设置字体加粗 */
+            font-weight: bold;
+            /* 设置padding */
+            padding-left: 30px;
+        }
+        /* 设置新闻列表 */
+        .list{
+            margin-top: 20px;
+            /* 设置项目符号 */
+            /* list-style: square; */
+        }
+        /* 通过before伪元素，来为每一个li添加项目符号 */
+        .news-list li::before{
+            content: '■';
+            color: rgb(218, 218, 218);
+            font-size: 12px;
+            margin-right: 4px;
+        }
+        /* 设置li */
+        .news-list li{
+            margin:17px 0;
+            font-size: 12px;
+            color: #666;
+        }
+        /* 设置li文字 */
+        .news-list li a:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 创建新闻列表的外侧的容器 -->
+    <div class="news-list">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">军事</a>
+            <span>·</span>
+            <a href="#">航空</a>
+        </h2>
+        <!--  创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="#">
+                 <!--  创建图片的标题 -->
+                <img src="./img/03/1.webp" alt="F22航载版">
+                <h2 class="img-title">
+                    F22航载版 可变掠翼设计外形酷炫
+                </h2>
+            </a>
+        </div>
+        <!-- 新闻列表 -->
+        <ul class="list">
+            <li>
+                <a href="#">肥电、猛禽、大黄蜂、鹰齐聚岩国基地</a>
+            </li>
+            <li>
+                <a href="#">F22和F35编队飞行：外形相似 体型悬殊 </a>
+            </li>
+            <li>
+                <a href="#">白俄罗斯航空首架737-8飞机在明斯克降落</a>
+            </li>
+            <li>
+                <a href="#">巴航工业的 未来科技“模块化飞机”</a>
+            </li>
+        </ul>
+        
+    </div>
+</body>
+</html>
